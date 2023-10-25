@@ -35,7 +35,7 @@ body {
 
 .container .main-content {
     grid-area: 1 / 2 / -1 / -1;
-    padding: 100px;
+    padding: 60px;
     display: flex;
     flex-direction: column;
 }
@@ -73,16 +73,19 @@ body {
     width: 20%;
 }
 
-.container .main-content table td {
+.container .main-content table tr td {
     font-size: 1.7rem;
     text-align: center;
-    width: 150px;
-    overflow-y:auto;
+    max-width: 300px;
+    overflow: auto;
+}
+.container .main-content table tr td::-webkit-scrollbar {
+    width: 5px;
+    color: gray;
 }
 
 .container .main-content table tr {
     background-color: azure;
-    width: 1400px;
 }
 
 .container form button {
@@ -104,10 +107,6 @@ body {
     font-size: 1.3rem;
     border-radius: 10px;
     margin: 10px 15px;
-}
-
-.container .main-content table {
-    border-collapse: separate;
 }
 
 

@@ -77,6 +77,10 @@ function demonstrate () {
         bookItem.appendChild(bookState);
         bookItem.appendChild(btnCol);
     }
+
+    for (let i = 1; i < bookItem.childElementCount; i++) {
+        child
+    }
 }
 
 function clearBookList () {

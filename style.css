@@ -1,0 +1,114 @@
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(228, 248, 255);
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 6fr;
+    grid-template-rows: 2fr 10fr;
+}
+
+.container > h1 {
+    grid-area: 1 / 1 / 2 / 2;
+    font-size: 4rem;
+    font-weight: bold;
+    justify-self: center;
+}
+
+.container > form {
+    grid-area: 2 / 1 / -1 / 2;
+    background-color: lightgray;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 0 10px;
+}
+
+.container .main-content {
+    grid-area: 1 / 2 / -1 / -1;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container form input,
+.container form select {
+    height: 1.8rem;
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+.container form .inpt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.container form label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.container .main-content h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container .main-content table th {
+    color: white;
+    background-color: black;
+    font-size: 2rem;
+    width: 20%;
+}
+
+.container .main-content table td {
+    font-size: 1.7rem;
+    text-align: center;
+    width: 150px;
+    overflow-y:auto;
+}
+
+.container .main-content table tr {
+    background-color: azure;
+    width: 1400px;
+}
+
+.container form button {
+    height: 3rem;
+    width: 10rem;
+    padding: 10px 20px;
+    margin-left: 1rem;
+    border-radius: 15px;
+    color: rgb(89, 89, 89);
+    background-color: aquamarine;
+    font-size: 1.2rem;
+}
+
+.container .main-content table button {
+    width: 5rem;
+    height: 2rem;
+    background-color: rgb(72, 72, 72);
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    margin: 10px 15px;
+}
+
+.container .main-content table {
+    border-collapse: separate;
+}
+
+
+

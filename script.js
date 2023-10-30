@@ -15,21 +15,32 @@ let delBtn, editBtn;
 
 const myLibrary = [];
 
-function Book (title, name, pages, state) {
-    this.title = title;
-    this.author = name;
-    this.pages = pages;
-    this.state = state;
+class Book {
+    constructor (title, name, pages, state) {
+        this.title = title;
+        this.author = name;
+        this.pages = pages;
+        this.state = state;
+    }
+
+    toggle () {
+        if (this.state === 'Read') {
+            return this.state = 'Not read';
+        }
+        else {
+            return this.state = 'Read';
+        }    
+    }
 }
 
-Book.prototype.toggle = function () {
+/*Book.prototype.toggle = function () {
     if (this.state === 'Read') {
         return this.state = 'Not read';
     }
     else {
         return this.state = 'Read';
     }
-}
+}*/
 
 function addToLibrary (title, name, pages, status){
     let book = new Book(title, name, pages, status);
@@ -76,10 +87,6 @@ function demonstrate () {
         bookItem.appendChild(bookPages);
         bookItem.appendChild(bookState);
         bookItem.appendChild(btnCol);
-    }
-
-    for (let i = 1; i < bookItem.childElementCount; i++) {
-        child
     }
 }
 
